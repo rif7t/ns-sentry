@@ -26,7 +26,29 @@ go.work.sum
 
 # env file
 .env
+.env.local
+
+# Local documentation/guides
+AGENTS.md
 
 # Editor/IDE
-# .idea/
-# .vscode/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# Build binaries (but not controller-gen version marker)
+bin/controller-gen-*
+
+# Test & build artifacts
+testbin/
+dist/
+
+# Kubebuilder generated artifacts (when rebuilt locally)
+config/crd/bases/
+config/rbac/role.yaml
+config/webhook/manifests.yaml
